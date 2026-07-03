@@ -1,0 +1,21 @@
+{
+  "name": "autocomplete-form-testing",
+  "version": "1.0.0",
+  "description": "SDET practical assignment: test scenarios, test cases, and Playwright UI/API automation for the Autocomplete Form.",
+  "scripts": {
+    "mock-server": "node mock-server/server.js",
+    "test": "playwright test",
+    "test:ui": "playwright test tests/ui",
+    "test:api": "playwright test tests/api",
+    "test:report": "playwright show-report",
+    "install:browsers": "playwright install --with-deps chromium"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.47.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  }
+}

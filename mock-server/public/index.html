@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Autocomplete Form</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 480px; margin: 60px auto; }
+    .form-container { border: 1px solid #ddd; padding: 24px; border-radius: 8px; }
+    .suggestions { list-style: none; padding: 0; margin: 8px 0; border: 1px solid #eee; }
+    .suggestions li { padding: 8px; cursor: pointer; }
+    .suggestions li:hover, .suggestions li:focus { background: #f0f0f0; outline: none; }
+    .suggestions li[hidden] { display: none; }
+    input#input-field { width: 100%; padding: 8px; box-sizing: border-box; }
+    button#next-button { margin-top: 12px; padding: 8px 16px; }
+    .error-message, .success-container { display: none; margin-top: 12px; }
+    .error-message.visible { display: block; color: #b00020; }
+    .success-container.visible { display: block; color: #0a7d2c; }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Autocomplete Form</h1>
+    <label for="input-field">Enter a value:</label>
+    <input type="text" id="input-field" placeholder="Type here..." autocomplete="off" tabindex="1" />
+    <ul class="suggestions" id="suggestions-list">
+      <li data-value="agile methodology" tabindex="2">agile methodology</li>
+      <li data-value="agile methodology process" tabindex="3">agile methodology process</li>
+      <li data-value="agile methodology process testing" tabindex="4">agile methodology process testing</li>
+    </ul>
+    <button id="next-button" tabindex="5">Next</button>
+    <span class="error-message" id="error-message">Error: Invalid input. Please select a valid suggestion.</span>
+    <div class="success-container" id="success-container">
+      <p>Success! Your response has been recorded.</p>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
