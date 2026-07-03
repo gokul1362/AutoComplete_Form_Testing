@@ -35,6 +35,13 @@ backend are fictional).
 - Node.js 18+
 - npm
 
+## Creating python virtual environment
+
+```bash
+npm install
+npx playwright install chromium   # downloads the browser binary Playwright drives
+```
+
 ## Setup
 
 ```bash
@@ -77,7 +84,10 @@ npm run mock-server
 - `mock-server/` exists only because the assignment's target URL/API aren't real. It
   deliberately implements the fixed FR-05 defects correctly (e.g. `completed` as a boolean),
   and the negative tests exist to prove the suite _would_ catch it if that regressed.
-- `docs/7-ai-reflection.md` is written as a template/example for Task 6, not a real submission
-  — if you're using this for your own assignment, that section must reflect your own actual AI
-  usage and be accompanied by your own real prompts and conversation transcript, per the
-  assignment's submission requirements.
+
+## AI Usage Artifacts
+
+As requested in the assignment, this repository includes:
+
+- `prompts/prompts.md` – A summary of the prompts used during AI-assisted development.
+- `ai-transcript/chatgpt-conversation.json` – The exported JSON transcript of the AI conversation.
