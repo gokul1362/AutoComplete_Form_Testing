@@ -38,8 +38,8 @@ backend are fictional).
 ## Creating python virtual environment
 
 ```bash
-npm install
-npx playwright install chromium   # downloads the browser binary Playwright drives
+python -m venv .venv       # creates virtual python env called .venv
+.venv\Scripts\Activate.ps1  # Activates the virtual python env
 ```
 
 ## Setup
